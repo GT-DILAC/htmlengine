@@ -15,8 +15,8 @@ The SIR Model is an epidemiological model consisting of three dependent paramete
 
 These three parameters are calculated over time using the following independent parameters:
 - The number of days that you want to observe the pandemic for
-- Transmission rate of the virus, 
-- Recovery rate (usually 1/days),
+- Transmission rate of the virus (beta), 
+- Recovery rate (gamma, usually 1/days),
 - Initial Susceptible Fraction (S0), 
 - Initial Infected Fraction (I0)
 
