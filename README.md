@@ -10,12 +10,12 @@ The Node.js_Multiplayer_Template.zip file is a ready to use template to start bu
 
 The SIR Model is an epidemiological model consisting of three dependent parameters:
 - The Susceptible fraction of the population (S) over time, i.e,. those who have not yet contracted the virus
-– The Infected fraction of the population (I) over time, i.e,. those who have the virus
-– The Recovered fraction of the population (R) over time, i.e., those who had the virus, but have healed and cannot get the virus again
+- The Infected fraction of the population (I) over time, i.e,. those who have the virus
+- The Recovered fraction of the population (R) over time, i.e., those who had the virus, but have healed and cannot get the virus again
 
 These three parameters are calculated over time using the following independent parameters:
 - The number of days that you want to observe the pandemic for
-- Transmission rate of the virus, 
+- Transmission rate of the virus, 
 - Recovery rate (usually 1/days),
 - Initial Susceptible Fraction (S0), 
 - Initial Infected Fraction (I0)
