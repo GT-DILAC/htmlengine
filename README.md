@@ -40,5 +40,5 @@ So if there were 4 infected people, and the probability of running into them was
 On the other hand, you can also choose to not use the S, I, R calculation and simply calculate the chance of infection if you already know how many infected people are present. For example, if you know there are 6 total infected people at a location, then you may directly use:
 - Probability of Getting Infected = Total Infected People (6) x Probability of Contact x Probability of Catching Infection
 
-# DISCLAIMER: Please note that the values and model equations are only approximations and not an accurate representation of the pandemic. They are meant for educational purposes only and should not be used to make predictions about the COVID-19 pandemic.
+**DISCLAIMER: Please note that the values and model equations are only approximations and not an accurate representation of the pandemic. They are meant for educational purposes only and should not be used to make predictions about the COVID-19 pandemic.**
 
