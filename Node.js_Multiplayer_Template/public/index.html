@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!---Socket.IO Client-side Library-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+
+  <!---Our scripts to connect to the websocket server-->
+  <script src="websockets.js"></script>
+
+  <!---Initially hiding the game-->
+  <style>
+    #game {
+      display: none;
+    }
+
+    .important::placeholder {
+      color: red;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!---Screen for Joining a Room-->
+  <div id="joinScreen">
+    <div id="nameInput">
+      <b>Name:</b>
+      <input id="playerNameInput" placeholder="Enter Your Name"></input><br><br>
+    </div>
+
+    <div id="joinRoom">
+      <i>Already have a room code?</i>
+      <br>
+      Join
+      <input id="roomCode" placeholder="Room Code"></input>
+      <button id="joinGame" onClick="joinGame()">→</button>
+      <br><br>
+    </div>
+
+    <div id="createRoom">
+      <i>Starting a new room?</i>
+      <br>
+      <button id="startNewGame" onClick="startNewGame()">Create New Room</button>
+      <br><br>
+    </div>
+
+    <div id="publicRoom">
+      Public Games Available:
+    </div>
+    <div id="publicGames">
+    </div>
+    <br><br>
+  </div>
+
+  <!---Placeholder Game-->
+  <div id="game">
+    <div id="showRoomCode"></div>
+    <div id="playersInRoom"></div>
+    <button id="leaveGame" onClick="leaveGame()">Leave Game</button>
+    <br><br><br>
+    Choose an Option:
+    <select id="myChoices" onchange="newMove()">
+      <Option value=1>Choice 1</Option>
+      <Option value=2>Choice 2</Option>
+      <Option value=3>Choice 3</Option>
+      <Option value=4>Choice 4</Option>
+    </select>
+
+    <table>
+      <tr>
+        <td>Player 1:</td>
+        <td class="playerChoices"></td>
+      </tr>
+      <tr>
+      <tr>
+        <td>Player 2:</td>
+        <td class="playerChoices"></td>
+      </tr>
+      <tr>
+      <tr>
+        <td>Player 3:</td>
+        <td class="playerChoices"></td>
+      </tr>
+      <tr>
+      <tr>
+        <td>Player 4:</td>
+        <td class="playerChoices"></td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+
+</html>
