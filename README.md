@@ -4,7 +4,7 @@ The example.js file is the best place to start as it uses and explains all the k
 
 The SIRModel.bundle.js file contains the main differential equation solver and other model related functions. If you wish to change the model directly, that is the place to look. It should only be modified after line 800 (var SIR_function) onwards.
 
-The Node.js_Multiplayer_Template.zip file is a ready to use template to start building an online multiplayer game using Websockets and Node.js. It also has instructions in another README.md file to get you started.
+The Node.js_Multiplayer_Template folder contains a ready to use template to start building an online multiplayer game using Websockets and Node.js. It has instructions in another README.md file to get you started.
 
 # Basic Information about how the SIR Model can be used:
 
