@@ -44,3 +44,6 @@ On the other hand, you can also choose to not use the S, I, R calculation and si
 
 **DISCLAIMER: Please note that the values and model equations are only approximations and not an accurate representation of the pandemic. They are meant for educational purposes only and should not be used to make predictions about the COVID-19 pandemic.**
 
+# Credits
+
+This model was developed by Dr. Joshua Weitz and Marian Dominguez-Mirazo from the Weitz group at Georgia Tech. It was translated and repurposed into a javascript template by researchers in the Digital Intergrative Liberal Arts Center (DILAC) at Georgia Tech.
