@@ -4,7 +4,7 @@ The example.js file is the best place to start as it uses and explains all the k
 
 The SIRModel.bundle.js file contains the main differential equation solver and other model related functions. If you wish to change the model directly, that is the place to look. It should only be modified after line 800 (var SIR_function) onwards.
 
-The Node.js_Multiplayer_Template.zip file is a ready to use template to start building an online multiplayer game using Websockets and Node.js. It also has instructions in another README.md file to get you started.
+The Node.js_Multiplayer_Template folder contains a ready to use template to start building an online multiplayer game using Websockets and Node.js. It has instructions in another README.md file to get you started.
 
 # Basic Information about how the SIR Model can be used:
 
@@ -44,3 +44,6 @@ On the other hand, you can also choose to not use the S, I, R calculation and si
 
 **DISCLAIMER: Please note that the values and model equations are only approximations and not an accurate representation of the pandemic. They are meant for educational purposes only and should not be used to make predictions about the COVID-19 pandemic.**
 
+# Credits
+
+This model was developed by Dr. Joshua Weitz and Marian Dominguez-Mirazo from the Weitz group at Georgia Tech. It was translated and repurposed into a javascript template by researchers in the Digital Intergrative Liberal Arts Center (DILAC) at Georgia Tech.
