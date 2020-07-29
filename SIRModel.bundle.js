@@ -867,6 +867,14 @@
             function Infection_prob_local(numSickPeople, contactProb, infectiousContactProb) {
                 contacts_I = contactProb * (numSickPeople); //Expected contacts with infected NPCs
                 infected_prob = infectiousContactProb * contacts_I; //Probability of getting infected
+                
+                if(infected_prob>=1){
+                    infected_prob = 1;
+                }
+                if(infected_prob<=0){
+                    infected_prob = 0;
+                }
+                
                 return infected_prob;
             }
 
