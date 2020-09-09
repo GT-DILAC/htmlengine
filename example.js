@@ -5,7 +5,8 @@
  * Initial Susceptible Fraction (S0), 
  * Initial Infected Fraction (I0)*/
 var transmissionRate = 0.3;
-var totalDays = 14;
+var totalDays = 21;
+var shiftsPerDay = 2;
 var recoveryRate = 1/totalDays;
 var S0 = 0.933;
 var I0 = 0.0611;
@@ -16,7 +17,7 @@ var NewYorkParams = new sirModel.CityParams(0.3, 1 / 14, 0.933, 0.0661);
  * for the given number of days,
  * for the given shifts per day 
 It stores them in a totalShifts x 3 array */
-var newYorkSIRData = sirModel.SIRMODEL(NewYorkParams, 21, 2);
+var newYorkSIRData = sirModel.SIRMODEL(NewYorkParams, totalDays, shiftsPerDay);
 
 
 /** The sirModel.Infection_prob_city function returns the probability of infection for a given location using: 
