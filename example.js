@@ -1,15 +1,15 @@
 /**the sirModel.CityParams function sets the initial conditions and independent parameters of a city: 
- * Transmission rate, 
+ * Transmission (infection) rate, 
  * Total Days that you want t, observe the pandemic form
  * Recovery rate (1/days), 
  * Initial Susceptible Fraction (S0), 
  * Initial Infected Fraction (I0)*/
-var transmissionRate = 0.3;
-var totalDays = 21;
-var shiftsPerDay = 2;
-var recoveryRate = 1/totalDays;
+var transmissionRate = 0.3; //a.k.a the infection rate, beta
+var recoveryRate = 1/14; //1/(days needed to recover)
 var S0 = 0.933;
 var I0 = 0.0611;
+var totalDays = 21;
+var shiftsPerDay = 2;
 var NewYorkParams = new sirModel.CityParams(0.3, 1 / 14, 0.933, 0.0661);
 
 /** The sirModel.SIRMODEL function calculates the SIR values 
@@ -54,11 +54,11 @@ var currentRecovered = currentSIR[2];
 console.log("Fraction of population susceptible in New York on day" + currentDay + " shift " + currentShift + ": " + currentSusceptible);
 console.log("Fraction of population infected in New York on day" + currentDay + " shift " + currentShift + ": " + currentInfected);
 console.log("Fraction of population recovered in New York on day" + currentDay + " shift " + currentShift + ": " + currentRecovered);
-console.log("Probability of being infected in a place with " + numPeopleAtLocation + " people in New York." + infectionProb);
+console.log("Probability of being infected in a place with " + Math.floor(currentSIR[1]*numPeopleAtLocation) + " sick people in New York is " + infectionProb);
 console.log("Are you infected?: " + isInfected);
 
-document.getElementById("infectedProb").innerHTML = infectionProb;
-document.getElementById("infected").innerHTML = isInfected;
+// document.getElementById("infectedProb").innerHTML = infectionProb;
+// document.getElementById("infected").innerHTML = isInfected;
 
 
 /** If you already know how many sick people are in a given location, 
@@ -68,15 +68,15 @@ document.getElementById("infected").innerHTML = isInfected;
  * probability of coming into contact with any person at that location (e.g., 0.8)
  * probability that contact with an infected person will spread infection (usually 0.05)
  */
-var numSickPeople = 40;
+var numSickPeople =15;
 var contactProb2 = 0.3;
 var infectiousContactProb2 = 0.05;
 
 var infectionProb2 = sirModel.Infection_prob_local(numSickPeople, contactProb2, infectiousContactProb2);
 var isInfected2 = sirModel.IsInfected(infectionProb2);
 
-console.log("Probability of being infected in a place with " + numSickPeople + " people in New York: " + infectionProb2);
+console.log("Probability of being infected in a place with " + numSickPeople + " sick people in New York: " + infectionProb2);
 console.log("Are you infected?: " + isInfected2);
 
-document.getElementById("infectedProb2").innerHTML = infectionProb2;
-document.getElementById("infected2").innerHTML = isInfected2;
+// document.getElementById("infectedProb2").innerHTML = infectionProb2;
+// document.getElementById("infected2").innerHTML = isInfected2;

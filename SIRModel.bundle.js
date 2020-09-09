@@ -796,7 +796,7 @@
             
             
             
-
+            //Set up Initial Conditions
             function CityParams(beta, gamma, S0, I0) {
 
                 this.beta = beta; // infection rate
