@@ -796,14 +796,23 @@
             
             
             
-            
+
+            function CityParams(beta, gamma, S0, I0) {
+
+                this.beta = beta; // infection rate
+                this.gamma = gamma; // Recovery rate (1/days)
+                this.S0 = S0; //Initial susceptible fraction
+                this.I0 = I0; //Initial infected fraction
+                this.R0 = 1 - this.S0 - this.I0; //Initial recovered fraction
+                this.y0 = [this.S0, this.I0, this.R0]; //Combining into array
+            }
             
             /**Main SIR function containing the key differential equations*/
             var SIR_function = function (cityParams) {
                 return function (t, y) {
 
-                    beta = cityParams.beta;
-                    gamma = cityParams.gamma;
+                    beta = cityParams.beta; //infection rate
+                    gamma = cityParams.gamma; //recover rate
 
                     var S = y[0];
                     var I = y[1];
@@ -897,15 +906,6 @@
                 return [cityDiseaseModel[totalShifts - 1][0], cityDiseaseModel[totalShifts - 1][1], cityDiseaseModel[totalShifts - 1][2]];
             }
 
-            function CityParams(beta, gamma, S0, I0) {
-
-                this.beta = beta; // transmission rate
-                this.gamma = gamma; // Recovery rate (1/days)
-                this.S0 = S0; //Initial susceptible fraction
-                this.I0 = I0; //Initial infected fraction
-                this.R0 = 1 - this.S0 - this.I0; //Initial recovered fraction
-                this.y0 = [this.S0, this.I0, this.R0]; //Combining into array
-            }
 
 
             module.exports.CityParams = CityParams;
